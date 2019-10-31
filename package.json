@@ -1,0 +1,31 @@
+{
+    "name": "tic-tac-toe",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "webpack-dev-server --mode development",
+        "build": "webpack --mode development",
+        "test": "mocha test/*-spec.js"
+    },
+    "engines": {
+        "node": ">= 6.0.0",
+        "npm": ">= 3.0.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.6.4",
+        "@babel/core": "^7.6.4",
+        "@babel/preset-env": "^7.6.3",
+        "@babel/preset-react": "^7.6.3",
+        "babel-loader": "^8.0.6",
+        "css-loader": "^3.2.0",
+        "mocha": "^6.2.2",
+        "react": "^16.11.0",
+        "react-dom": "^16.11.0",
+        "style-loader": "^1.0.0",
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.9",
+        "webpack-dev-server": "^3.9.0"
+    },
+    "dependencies": {
+        "react-hot-loader": "^4.12.15"
+    }
+}
