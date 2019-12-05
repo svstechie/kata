@@ -2,17 +2,18 @@ import React, { Component} from "react";
 import Cell from "./Cell";
 
 
-const buildCellForRow = Array(3).fill().map((i) => { return <div className="cell"></div> } );
+const rowCount = 3;
+const cellCount = 3;
+
+const buildCellForRow = Array(cellCount).fill().map((i) => { return <div className="cell"></div> } );
+const buildRowWithCell = Array(rowCount).fill().map((i) => { return <div className="row">{ buildCellForRow }</div> } );
 
 class Board extends React.Component {
 
     render(){
         return <div>
-        {/* //            <Cell /> */}
-                   <div className="row">
-                        { buildCellForRow }
-                   </div>
-                </div>
+                {buildRowWithCell}
+            </div>
     }
 }
 

@@ -10,9 +10,13 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe("Board", () => {
 
-    it('should have one row with three cells when it is rendered', () => {
+    it('should have three rows  when it is rendered', () => {
         let boardComponent = shallow(<Board />)
-        expect(boardComponent.find(".row .cell")).to.have.lengthOf(3);
+        expect(boardComponent.find(".row")).to.have.lengthOf(3);
+    })
+    it('should have three rows with nine cells when it is rendered', () => {
+        let boardComponent = shallow(<Board />)
+        expect(boardComponent.find(".row .cell")).to.have.lengthOf(9);
     })
 
 })
