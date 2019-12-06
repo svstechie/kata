@@ -9,9 +9,9 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe("App rendering",() => {
     describe("Renders Board", () => {
-        it("Should render a board with one position", () => {
+        it("Should contains the header 'Lets Play!' ", () => {
             const wrapper = shallow(<App />)
-            expect(wrapper.find('h1')).to.be.lengthOf(1);
+            expect(wrapper.find('h1').text()).to.equal('Lets Play!');
         });
     });
 });

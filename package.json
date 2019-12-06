@@ -4,7 +4,7 @@
     "scripts": {
         "start": "webpack-dev-server --mode development",
         "build": "webpack --mode development",
-        "test": "mocha --require @babel/register --require test-helper.js test/*-spec.js"
+        "test": "mocha --require @babel/register  --require ignore-styles --require test-helper.js test/*-spec.js"
     },
     "engines": {
         "node": ">= 6.0.0",
@@ -21,13 +21,14 @@
         "css-loader": "^3.2.0",
         "enzyme": "^3.10.0",
         "enzyme-adapter-react-16": "^1.15.1",
+        "ignore-styles": "^5.0.1",
         "jsdom": "^15.2.1",
         "jsdom-global": "^3.0.2",
         "mocha": "^6.2.2",
         "nodemon": "^1.19.4",
         "react": "^16.11.0",
         "react-dom": "^16.11.0",
-        "style-loader": "^1.0.0",
+        "style-loader": "^1.0.1",
         "webpack": "^4.41.2",
         "webpack-cli": "^3.3.9",
         "webpack-dev-server": "^3.9.0"
