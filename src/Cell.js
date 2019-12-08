@@ -9,16 +9,16 @@ class Cell extends React.Component {
         }
     }
 
-    handleClick(player) {
+    handleClick(player,rowIndex) {
        if(this.state.clickedPlayer.length == 0) {
             this.setState({clickedPlayer : player});
-            this.props.parentCallback(player);
+            this.props.parentCallback(player,rowIndex);
        }  
     }
 
 
     render(props){
-        return <div className="cell" onClick={() => this.handleClick(this.props.player)}>
+        return <div className="cell" onClick={() => this.handleClick(this.props.player, this.props.value)}>
                 {this.state.clickedPlayer}
                 </div>
     }

@@ -22,4 +22,16 @@ describe("Board", () => {
         expect(boardComponent.find(".row")).to.have.lengthOf(3);
     });
 
+    it('check 9 cells should be clickable', () => {
+        const component = mount(<Board />);
+        let a=0;
+         component.find('.cell').forEach((node) => {
+            node.forEach((cellNode) => {
+                cellNode.simulate('click');                    
+                a++;
+            });
+           })
+           expect(a).to.equal(9);  
+    });
+
 })
