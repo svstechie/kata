@@ -13,10 +13,19 @@ describe("Board", () => {
     it('should have three rows  when it is rendered', () => {
         let boardComponent = shallow(<Board />)
         expect(boardComponent.find(".row")).to.have.lengthOf(3);
-    })
-    it('should have three rows with nine cells when it is rendered', () => {
-        let boardComponent = shallow(<Board />)
-        expect(boardComponent.find(".row .cell")).to.have.lengthOf(9);
-    })
+    });
 
+
+    it('should have three rows when board is rendered', () => {
+        let boardComponent = shallow(<Board />)
+        expect(boardComponent.find(".row")).to.have.lengthOf(3);
+    });
+
+    it('should have three cells per row when board is rendered', () => {
+        let boardComponent = shallow(<Board />)
+        let rowsOnBoard = boardComponent.find('.row')
+        expect(rowsOnBoard.at(0).find(Cell)).to.have.lengthOf(3);
+        expect(rowsOnBoard.at(1).find(Cell)).to.have.lengthOf(3);
+        expect(rowsOnBoard.at(2).find(Cell)).to.have.lengthOf(3);
+    });
 })
