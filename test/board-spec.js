@@ -16,9 +16,9 @@ describe("Board", () => {
     });
 
 
-    xit('should have three rows with nine cells when it is rendered', () => {
+    it('should have three rows when board is rendered', () => {
         let boardComponent = shallow(<Board />)
-        expect(boardComponent.find(".row .cell")).to.have.lengthOf(9);
+        expect(boardComponent.find(".row")).to.have.lengthOf(3);
     });
 
     it('should have three cells per row when board is rendered', () => {
