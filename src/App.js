@@ -1,8 +1,9 @@
 import React, { Component} from "react";
 
 
-import Board from './Board'
-import './styles/board.css'
+import Board from './Board';
+// import './styles/board.css';
+
 class App extends Component{
     componentDidMount(){
 

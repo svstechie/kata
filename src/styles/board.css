@@ -1,7 +1,7 @@
-.row{
+.row {
     display: flex;
 }
-.cell{
+.cell {
     height: 50px;
     width: 50px;
     border: 1px solid black;
